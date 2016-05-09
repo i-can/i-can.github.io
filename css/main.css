@@ -255,9 +255,7 @@ padding:15px 25px;
 
 
  @media (max-width: 767px) {
-.min-height {
-	min-height: 610px;
-} 	
+	
  .navbar-brand {
  display:none;
  margin:0px;
@@ -308,10 +306,10 @@ margin:0px;
  with: 100%;
  margin-bottom:0px;
 }
-.thumb-shadow {
- min-height: auto;
- width: 100%;
-}
+.min-height {
+	min-height: 610px;
+	 width: 100%;
+} 
 }
  @media (max-width: 420px) {
  .rd-mobilepanel {
