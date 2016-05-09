@@ -101,7 +101,8 @@ footer a {
 	color:#07a9df;
 }
 footer p {
-	float:right;
+	/*float:right;*/
+	    text-align: center;
 }
 #stuck_container {
 	left:0;
