@@ -273,6 +273,13 @@ margin-left:10px;
 list-style:decimal!important;
 }
 
+.post-col{
+margin-bottom:30px;}
+.post-col img{
+border: 5px solid #f1f1f1;
+}
+
+
  @media (max-width: 767px) {
 	
  .navbar-brand {
