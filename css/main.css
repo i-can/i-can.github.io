@@ -269,6 +269,11 @@ padding:15px 25px;
 .glyphicon-menu-down:before {
 display:none;
 }
+.thumbnail .caption {
+	padding: 23px 21px 34px 22px;
+	position: relative;
+	bottom: 0;
+}
  .rd-mobilepanel_title {
 /* display: table-cell;
     vertical-align: middle;*/
