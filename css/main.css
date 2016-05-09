@@ -278,7 +278,10 @@ margin-bottom:30px;}
 .post-col img{
 border: 5px solid #f1f1f1;
 }
+.entry-content iframe{
+	width:100%!important;
 
+}
 
  @media (max-width: 767px) {
 	
