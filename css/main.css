@@ -307,7 +307,7 @@ margin:0px;
  margin-bottom:0px;
 }
 .min-height {
-	min-height: 610px;
+	min-height: 610px!important;
 	 width: 100%;
 } 
 }
