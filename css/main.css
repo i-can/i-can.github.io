@@ -211,7 +211,7 @@ padding-top:10px;
     border-radius: 0;
     outline: none;
     -webkit-appearance: none;
-    height: 81px;
+    height: 60px;
     margin: 0;
 }
 #contact-form .empty-message, #contact-form .error-message {
