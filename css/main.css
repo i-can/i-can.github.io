@@ -254,6 +254,24 @@ padding-top:10px;
 padding:15px 25px;
 }
 
+.entry-content p {
+    overflow: hidden;
+    display: block;
+    margin-bottom: 18px;
+}
+
+.entry-content h6{
+display:block;
+}
+.entry-content ol{
+padding-left:20px;
+list-style:number!important;
+}
+.entry-content ol li{
+padding-left:10px;
+margin-left:10px;
+list-style:decimal!important;
+}
 
  @media (max-width: 767px) {
 	
