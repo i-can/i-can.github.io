@@ -1,0 +1,8 @@
+{
+  "name": "push notification",
+  "short_name": "push notification",
+  "start_url": "/",
+  "display": "standalone",
+  "gcm_sender_id": "350876839192",
+  "gcm_user_visible_only": true
+}
