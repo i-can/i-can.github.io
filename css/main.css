@@ -1,8 +1,32 @@
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,900,800,700,600,500,300,200,100);
+body{
+background:url(../img/bg-01.jpg) no-repeat;
+    font-family: 'myriadpro-regular';
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+@font-face {
+  font-family: 'myriadpro-regular';
+  src: url('../fonts/myriadpro-regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/myriadpro-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    /*   url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/myriadpro-regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/myriadpro-regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/myriadpro-regular.svg') format('svg'); /* Legacy iOS */
+}
+
+
 .navbar-header {
 	background:#fff;
 }
+main .container {
+    background: #ffffff;
+    padding: 20px 20px 50px;
+}
+.well {padding:0;}
 .help-box {
 	color: #ffffff;
 	padding-bottom: 19px;
@@ -13,11 +37,9 @@ header {
 	/* background-color: #dbe8f0!important; */
       border-bottom: 10px solid #000;
 	padding-bottom: 10px;
-	margin-bottom: 15px;
+	/*margin-bottom: 15px;*/
 }
-main {
-	padding-bottom: 50px;
-}
+
 header .top-sect {
 	padding-bottom:0px;
 }
@@ -41,7 +63,9 @@ header .stuck_container {
 }
 .banner-image {
 	with:100%;
-	margin: 10px auto 10px;
+	margin: 0px auto 0px;
+	padding:20px;
+	background:#fff;
 }
 .banner-image img {
 	height: auto;
@@ -282,14 +306,21 @@ border: 5px solid #f1f1f1;
 	width:100%!important;
 
 }
-}
 .label-default {
     background-color: #777777;
 }
 
+.space-content H2{
+font-size:36px;
+font-weight:600;
+}
 
+/***media query***/
  @media (max-width: 767px) {
-	
+.space-content H2{
+font-size:24px;
+font-weight:600;
+}	
  .navbar-brand {
  display:none;
  margin:0px;

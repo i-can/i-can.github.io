@@ -1851,7 +1851,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: 'Raleway', sans-serif;
+ /* font-family: 'Raleway', sans-serif;*/
   font-size: 15px;
   font-weight: 400;
   line-height: 1.73333333;
@@ -2057,7 +2057,7 @@ padding-top:15px;
 /*========================================================
                      CONTENT  Section
 =========================================================*/
-main {
+main .container{
   background: #ffffff;
 }
 section.sect-404 strong {
@@ -2114,7 +2114,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: 'Raleway', sans-serif;
+  /*font-family: 'Raleway', sans-serif;*/
   font-weight: 900;
   margin: 0;
   text-transform: uppercase;
@@ -8163,4 +8163,3 @@ button.close {
     display: none !important;
   }
 }
-
