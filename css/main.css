@@ -18,9 +18,11 @@ background:url(../img/bg-01.jpg) no-repeat;
        url('../fonts/myriadpro-regular.svg') format('svg'); /* Legacy iOS */
 }
 
-
 .navbar-header {
-	background:#fff;
+    position: relative;
+    background: #21c2f8;
+    color: #ffffff;
+    padding: 10px 0px 0px;
 }
 main .container {
     background: #ffffff;
