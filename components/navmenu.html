@@ -1,0 +1,13 @@
+<div flex layout="row" style="background-color:white;" ng-controller="defaultCtrl" ng-style="{'margin-left':$mdMedia('gt-sm')?'150px':'10px','margin-right':$mdMedia('gt-sm')?'150px':'10px'}">
+    <a href="http://indiacansolutions.com/">
+        <img src="../img/ican-logo.png">
+      
+    </a>
+    <ul flex layout="row" ng-controller="linkCTRL" layout-align="center center" style="list-style-type:none; position: relative;font-size: 16px;" layout-padding class="header-menu" hide-xs>
+        <li><a href="" ng-click="nt('index.html')" ng-style="{'color':getClass('index.html')}" layout-padding>Sitecore Services</a></li>
+        <li><a href="" ng-click="nt('about.html')" ng-style="{'color':getClass('about.html')}" layout-padding>Umbraco Services</a></li>
+        <li><a href="" ng-click="nt('translation.html')" ng-style="{'color':getClass('translation.html')}" layout-padding>Translation Services</a></li>
+        <li><a href="" ng-click="nt('about.html')" ng-style="{'color':getClass('about.html')}" layout-padding>About us</a></li>
+        <li><a href="" ng-click="nt('corner.html')" ng-style="{'color':getClass('corner.html')}" layout-padding>Contact us</a></li>
+    </ul>
+</div>

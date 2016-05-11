@@ -1,315 +1,125 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-<meta name="format-detection"/>
-<title>Hopeteamaz</title>
-<link rel="Shortcut Icon" href="http://www.hopeteamaz.org/wp-content/plugins/genesis-favicon-uploader/favicons/favicon.ico" type="image/x-icon" />
-<!-- Bootstrap -->
-<link href="css/bootstrap.css" rel="stylesheet">
-<!-- Links -->
-<link rel="stylesheet" href="css/search.css">
-<link rel="stylesheet" href="css/main.css">
-<!-- <link rel="stylesheet" href="css/contact-form1.css">-->
-<script src="js/jquery.js"></script>
-<script src="js/device.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
 
-<style>
-.modal-body .form-horizontal .col-sm-2,
-.modal-body .form-horizontal .col-sm-10 {
-    width: 100%
-}
+    <link rel="stylesheet" href="css/mainstyle.css" />
 
-.modal-body .form-horizontal .control-label {
-    text-align: left;
-}
-.modal-body .form-horizontal .col-sm-offset-2 {
-    margin-left: 15px;
-}
-</style>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/angular-material.min.css">
 
 </head>
-<body>
-<div class="page"> 
-  <!--========================================================
-HEADER
-=========================================================-->
-  <header>
-    <div class="container top-sect">
-      <div class="navbar-header padding-zero">
-        <div class="row">
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <h1 class="navbar-brand img-responsive"> <a data-type='rd-navbar-brand'  href="./"><img src="img/HOPE-Logo-CMYK.png" alt="Hopeteamaz"></a> </h1>
-          </div>
-          <div class="col-md-8 col-sm-8 col-xs-12">
-            <div class="help-box text-right"> <a href="#"><img src="img/top-header.png"></a> </div>
-          </div>
-        </div>
-      </div>
-      <div id="stuck_container" class="stuck_container">
-        <div class="container">
-          <nav class="navbar navbar-default navbar-static-top pull-left">
-            <div class="">
-              <ul class="nav navbar-nav sf-menu" data-type="navbar">
-                <li class="active"> <a href="index.html">HOME</a> </li>
-                <li> <a href="about.html">ABOUT US</a> </li>
-                <li class="dropdown"> <a href="event.html">EVENTS<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
-                  <ul class="dropdown-menu">
-                    <li> <a href="events-calendar.html">Events Calendar</a> </li>
-                    <li><a href="2015-reds-indians-charity-golf-classic.html">2015 Reds/Indians Charity Golf Classic</a></li>
-                    <li> <a href="2015-broadhead-brotherhood-shoot-for-hope.html">2015 Broadhead Brotherhood Shoot for HOPE</a> 
-                      <!--<ul class="dropdown-menu">
-                        <li> <a href="#">Latest</a> </li>
-                        <li> <a href="#">Archive</a> </li>
-                      </ul>--> 
-                    </li>
-                  </ul>
-                </li>
-                <li> <a href="faq.html">FAQ</a> </li>
-                <li> <a href="volunteer.html">VOLUNTEER<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="volunteer-2.html">Become a Volunteer</a></li>
-                    <li><a href="teen-leadership-program.html">Teen Leadership Program</a></li>
-                  </ul>
-                </li>
-                <li> <a href="volunteer-corner.html">VOLUNTEER CORNER</a> </li>
-                <li> <a href="give.html">GIVE</a> </li>
-                <li> <a href="contact.html">CONTACT</a> </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </header>
-  
-<!--========================================================
-CONTENT
-=========================================================-->
-  
-  <main>
-    <!-- Main Content area -->
-    
-    <section class="well">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8 col-sm-12 col-xs-12 space-content">
-               <h2>
-                contact form
-              
-              </h2>
-              <form id="contact-form" class='contact-form'>
-                <div class="contact-form-loader"></div>
-                <fieldset>
-                
-                  <label class="name">
-                    <input type="text" name="name" placeholder="Name:" value="" data-constraints="@Required @JustLetters"/>
-                    <span class="empty-message">*This field is required.</span>
-                    <span class="error-message">*This is not a valid name.</span>
-                  </label> 
-                  
-                  <label class="email">
-                    <input type="text" name="email" placeholder="Email:" value="" data-constraints="@Required @Email"/>
-                    
-                    <span class="empty-message">*This field is required.</span>
-                    <span class="error-message">*This is not a valid email.</span>
-                  </label>             
-              
-                  <label class="Subject">
-                    <input type="text" name="subjet" placeholder="Subjet:" value="" data-constraints="@JustContent"/>
-              
-                    <span class="empty-message">*This field is required.</span>
-                    <span class="error-message">*This is not a valid phone.</span>
-                  </label>
+<body ng-app="BlankApp" ng-cloak style="background-color:#DDE7ED;">
 
-                  
-              
-                  <label class="message">
-                    <textarea name="message" placeholder="Message" data-constraints='@Required @Length(min=20,max=999999)'></textarea>
-              
-                    <span class="empty-message">*This field is required.</span>
-                    <span class="error-message">*The message is too short.</span>
-                  </label>
-              
-                 <!--  <label class="recaptcha"> <span class="empty-message">*This field is required.</span> </label> -->
-              
-                  <div class="btn-wr text-primary">
-                    <a class="btn btn-primary" href="#" data-type="submit">Submit</a>
-                  </div>
-                </fieldset>
-                <div class="modal fade response-message">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                          &times;
-                        </button>
-                        <h4 class="modal-title">Modal title</h4>
-                      </div>
-                      <div class="modal-body">
-                        You message has been sent! We will be in touch soon.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </form>
-              
-                     
-        </div>        
-   
-          
-          <aside  id="sidebar" class="title-height">
-          
-            <div class="col-md-4 col-sm-12 col-xs-12">
-              
-             <div class=" media"> 
-            <form class="search-form" action="search.php" method="GET" accept-charset="utf-8">
-          <label class="search-form_label">
-            <input class="search-form_input" type="text" name="s" autocomplete="off" placeholder=""/>
-            <span class="search-form_liveout"></span>
-          </label>
-          <button class="search-form_submit fa-search" type="submit"></button>
-        </form>
-        </div>
-     
-            <div class="thumbnail thumb-shadow padding-bottom">
-              <div class="row-devide">
-                <div class="head-title">
-                  <h3> Make a Donation </h3>
-                </div>
-               <div class="donate"><a href="#"><img src="img/donate1.png" alt=""></a> </div>
-            </div>
-              
-              
-            </div>
-            <div class="thumbnail thumb-shadow padding-bottom">
-            <div class="row-devide">
-                <div class="head-title">
-                  <h3> Volunteer</h3>
-                </div>
-                <p>
-                The H.O.P.E. Team provides the volunteer program at Western Regional Medical Center. These volunteers a vital part of the team that provides hope, healing, and care to patients and families affected by cancer. If you are looking for a life-changing experience and are available 3-4 hours a week, then the H.O.P.E. Team volunteer team may be just what you are seeking.</p> <p class="lead"><a href="#">Click here to learn more!</a>
-                </p>
-                <div class="volunteer-mark"><a href="#"><img src="img/apply_online_volunteer-v2.png" alt=""></a></div> </div>
-          </div>
-          <div class="thumbnail thumb-shadow padding-bottom">
-            <div class="row-devide">
-                <div class="head-title">
-                  <h3> Cancer Resources</h3>
-                </div>
-                <div class=""><a href="#"><img src="img/CTCA_Logo.jpg" alt=""></a></div>
-                <p>
-                <p class="lead"><a href="#">Cancer Fighters
-</a>
-                </p>
-                <p class="lead"><a href="#">
-Arizona Assistance in Health Care</a>
-                </p>
-                </div>
-          </div>
-          <div class="thumbnail thumb-shadow padding-bottom">
-            <div class="row-devide">
-                <div class="head-title">
-                  <h3> Cancer Resources</h3>
-                </div>
-             
-                <p>
-                Our Wish List shows items needed for patient activities and outings as well as comfort items that will be distributed to patients to support them through their journey.</p>
-                <p class="lead"><a href="#"> Click here to see the items on our Wish List.</a>
-               
-                </div>
-          </div>
-          
-          </div>
-           </aside>
-          
-            
-          </div>
-        </div>
-      </section>
-    
-    <!-- Sidebar -->
 
+    <!-- for navmenu and subnav component -->
+    <div ng-include="'components/mainheader.html'" class="header-position" style=""></div>
     
-      <!-- Modal -->
-<div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog" 
-     aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <button type="button" class="close" 
-                   data-dismiss="modal">
-                       <span aria-hidden="true">&times;</span>
-                       <span class="sr-only">Close</span>
-                </button>
-                <h4 class="modal-title" id="myModalLabel">
-                    Modal title
-                </h4>
+    <div flex layout="row" layout-padding layout-wrap ng-controller="defaultCtrl" ng-style="{'margin-left':$mdMedia('gt-sm')?'100px':'20px','margin-right':$mdMedia('gt-sm')?'100px':'20px','margin-bottom':$mdMedia('gt-sm')?'20px':'5px'}">
+        <div flex="25" hide-xs hide-sm>
+            <div flex style="background-color:#ea5428!important;" ng-controller="listCtrl">
+                <md-list>
+                    <md-list-item ng-repeat="item in signature" style="border-bottom: 1px dashed #f7b6ab;">
+                        <a class="md-button md-ink-ripple" href="" ng-transclude style="color:#fff;" md-button>{{item.name }}</a>
+                    </md-list-item>
+                </md-list>
             </div>
-            
-            <!-- Modal Body -->
-            <div class="modal-body">
-                
-                <form role="form">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                      <input type="email" class="form-control"
-                      id="exampleInputEmail1" placeholder="Enter email"/>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                      <input type="password" class="form-control"
-                          id="exampleInputPassword1" placeholder="Password"/>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input type="checkbox"/> Check me out
-                    </label>
-                  </div>
-                  <button type="submit" class="btn btn-default">Submit</button>
-                </form>
-                
-                
+            <br>
+            <div flex style="background-color:#7f3264!important;color:#fff;" layout-padding>
+                <p class="md-title layout-align-center-center">99 cents of every dollar received directly funds cancer clinical trials</p>
             </div>
-            
-            <!-- Modal Footer -->
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default"
-                        data-dismiss="modal">
-                            Close
-                </button>
-                <button type="button" class="btn btn-primary">
-                    Save changes
-                </button>
+            <div flex>
+                <center>
+                    <h2 style="color:#6fbf39">54</h2>
+                    <p>Current Gateway-funded clinical trials</p>
+                    <span flex></span>
+                    <h2 style="color:#6fbf39">140+</h2>
+                    <p>Clinical trials funded at leading institutions worldwide</p>
+                    <span flex></span>
+                    <h2 style="color:#6fbf39">16.56</h2>
+                    <p>Funds one patient for one day at a Gateway-funded clinical trial</p>
+                    <span flex></span>
+                </center>
+            </div>
+        </div>
+        <div flex>
+            <img alt="About.jpg" src="img/about_gateway.jpg" style="max-width:100%;height:auto;" ng-controller="defaultCtrl" ng-style="{'margin-top':$mdMedia('xs')?'10px':'auto'}">
+            <div layout="row" layout-xs="column">
+                <md-card style="border:1px solid #c7c7c7;">
+                    <img src="img/destination_cures_2016_signature_events_banner.png" style="max-width:100%;height:auto;">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-subhead" hide-xs>Saturday, April 30, 2016</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                    <md-card-actions layout="row" layout-align="end center">
+                        <md-button ng-controller="curesController as ctrl" ng-click="ctrl.openControlPanel()" class="md-raised md-btn" style="background-color:#47e1db;color:#fff;">Event Details</md-button>
+                    </md-card-actions>
+                </md-card>
+                <md-card style="border:1px solid #c7c7c7;">
+                    <img src="img/destination_cures_2016_signature_events_banner.png" style="max-width:100%;height:auto;">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-subhead" hide-xs>Saturday, April 30, 2016</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                    <md-card-actions layout="row" layout-align="end center">
+                        <md-button ng-controller="curesController as ctrl" ng-click="ctrl.openControlPanel()" class="md-raised md-btn" style="background-color:#47e1db;color:#fff;">Event Details</md-button>
+                    </md-card-actions>
+                </md-card>
+            </div>
+            <div class="layout-row layout-xs-column">
+                <md-card style="border:1px solid #c7c7c7;">
+                    <img src="img/cog-hill-signature-event-banner-2016.png" style="max-width:100%;">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <a class="md-subhead" href="" hide-xs>Click to email Delora Senft for more information</a>
+                        </md-card-title-text>
+                    </md-card-title>
+                </md-card>
+                <md-card style="border:1px solid #c7c7c7;">
+                    <img src="img/cures-gala-2015.png" style="max-width:100%;height:auto;">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-subhead" hide-xs>Saturday, October 17, 2015</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                    <md-card-actions layout="row" layout-align="end center">
+                        <md-button ng-controller="galaController as ctrl" ng-click="ctrl.openControlPanel()" class="md-raised md-btn" style="background-color:#47e1db;color:#fff;">Event Details</md-button>
+                    </md-card-actions>
+                </md-card>
+            </div>
+            <div class="layout-row layout-xs-column">
+                <md-card style="border:1px solid #c7c7c7;">
+                    <img src="img/bah-3-version-center-image-2.png" style="max-width:100%;height:auto;">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-subhead" hide-xs>Friday, October 16, 2015</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                    <md-card-actions layout="row" layout-align="end center">
+                        <md-button ng-controller="heroController as ctrl" ng-click="ctrl.openControlPanel()" class="md-raised md-btn" style="background-color:#47e1db;color:#fff;">Read More</md-button>
+                    </md-card-actions>
+                </md-card>
             </div>
         </div>
     </div>
-</div>
+    <div ng-include="'components/mobtab.html'" hide-gt-xs></div>
+    <div ng-include="'components/footer.html'"> </div>
+    <!-- Angular Material requires Angular.js Libraries -->
 
-  
-  
+    <script src="js/angular.min.js"> </script>
+
+    <script src="js/angular-animate.min.js"> </script>
+    <script src="js/angular-aria.min.js"> </script>
+    <script src="js/angular-material.min.js">    </script>
+
+    <script src="js/angular-messages.min.js"></script>
    
-  </main>
-  
-  <!--========================================================
-FOOTER
-=========================================================-->
-  <footer class="top-border">
-    <section class="well1">
-      <div class="container">
-        <p rel="nofollow">Copyright © 2016 H.O.P.E. Team | Website Design & Management: <a href="#">Pink Umbrella Media</a></p>
-      </div>
-    </section>
-  </footer>
-</div>
-<script src="js/bootstrap.min.js"></script> 
-<script src="js/tm-scripts.js"></script> 
 
-
+    <script src="js/mainlogic.js"></script>
+ 
 </body>
 </html>

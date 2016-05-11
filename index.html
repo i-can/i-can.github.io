@@ -1,353 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-<meta name="format-detection"/>
-<title>Hopeteamaz</title>
-<link rel="Shortcut Icon" href="http://www.hopeteamaz.org/wp-content/plugins/genesis-favicon-uploader/favicons/favicon.ico" type="image/x-icon" />
-<!-- Bootstrap -->
-<link href="css/bootstrap.css" rel="stylesheet">
-<!-- Links -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
 
-<link rel="stylesheet" href="css/main.css">
-<script src="js/jquery.js"></script>
-<script src="js/device.min.js"></script>
-<link rel="manifest" href="/manifest.json">
-<style>
-.min-height {
-    min-height: 702px;
-}
-</style>
+    <link rel="stylesheet" href="css/mainstyle.css" />
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/angular-material.min.css" >
 </head>
-<body>
-<div class="page"> 
-  <!--========================================================
-HEADER
-=========================================================-->
-  <header>
-    <div class="container top-sect">
-      <div class="navbar-header padding-zero">
-        <div class="row">
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <h1 class="navbar-brand img-responsive"> <a data-type='rd-navbar-brand'  href="./"><img src="img/HOPE-Logo-CMYK.png" alt="Hopeteamaz"></a> </h1>
-          </div>
-          <div class="col-md-8 col-sm-8 col-xs-12">
-            <div class="help-box text-right"> <a href="#"><img src="img/top-header.png"></a> </div>
-          </div>
+<body ng-app="BlankApp" ng-cloak>
+    <!-- for navmenu and subnav component -->
+    <div ng-include="'components/mainheader.html'" class="header-position" style="height:auto;"></div>
+    <!-- for carousel -->
+    <div flex layout="row" layout-xs="column" style="opacity:.9">
+        <div flex class="box">            
+                <img src="img/sitecore-scene.jpg" alt="sitecore-scene.jpg" style="max-width:100%;height:auto;" />
+            <h2>Sitecore <br />Services</h2>
         </div>
-      </div>
-      <div id="stuck_container" class="stuck_container">
-        <div class="container">
-          <nav class="navbar navbar-default navbar-static-top pull-left">
-            <div class="">
-              <ul class="nav navbar-nav sf-menu" data-type="navbar">
-                <li class="active"> <a href="index.html">HOME</a> </li>
-                <li> <a href="about.html">ABOUT US</a> </li>
-                <li class="dropdown"> <a href="event.html">EVENTS<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
-                  <ul class="dropdown-menu">
-                    <li> <a href="events-calendar.html">Events Calendar</a> </li>
-                    <li><a href="2015-reds-indians-charity-golf-classic.html">2015 Reds/Indians Charity Golf Classic</a></li>
-                    <li> <a href="2015-broadhead-brotherhood-shoot-for-hope.html">2015 Broadhead Brotherhood Shoot for HOPE</a> 
-                      <!--<ul class="dropdown-menu">
-                        <li> <a href="#">Latest</a> </li>
-                        <li> <a href="#">Archive</a> </li>
-                      </ul>--> 
-                    </li>
-                  </ul>
-                </li>
-                <li> <a href="faq.html">FAQ</a> </li>
-                <li> <a href="volunteer.html">VOLUNTEER<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="volunteer-2.html">Become a Volunteer</a></li>
-                    <li><a href="teen-leadership-program.html">Teen Leadership Program</a></li>
-                  </ul>
-                </li>
-                <li> <a href="volunteer-corner.html">VOLUNTEER CORNER</a> </li>
-                <li> <a href="give.html">GIVE</a> </li>
-                <li> <a href="contact.html">CONTACT</a> </li>
-              </ul>
-            </div>
-          </nav>
+        <div flex class="box">
+                <img src="img/umbraco.jpg" alt="Umbraco.jpg" style="max-width:100%;height:auto;">
+            <h2>umbraco <br />Services</h2>
         </div>
-      </div>
+        <div flex class="box" style="margin-top:12px">
+                <img src="img/translate.jpg" alt="Translate.jpg" style="max-width:100%;height:auto;">
+            <h2>Translation <br />Services</h2>
+        </div>
     </div>
-  </header>
-  
-  <!--========================================================
-BANNER
-=========================================================-->
-  <div class="container padding-zero">
-    <div class="row">
-      <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="banner-image"><a href="#"><img src="img/hope-team-2013-home-page-header.jpg" alt=""></a> </div>
-      </div>
+    <div class="product">
+        <center>
+            <h1 class="md-title" style="color:#ffffff;">CHOOSE FROM OUR VARIOUS TAILORED OFFERINGS</h1>
+            <h1 class="md-display-3" style="color:#ffffff">POWER & EASE FOR YOUR BUSINESS</h1>
+        </center>
+    <ul flex layout="row" layout-xs="column"layout-align="center center" style="list-style-type:none;">
+
+        <li>
+        <img alt="Sitecore Development.jpg" src="img/sitecore.png"  style="max-width:100%;height:auto;">
+            <h1 class="md-title" style="color:#ffffff;font-size:20px;">Sitecore Development</h1>
+                <p>Agile, expert, remote development <br /> teams to build Sitecore xPeriencene!</p>
+            <md-button class="btn1"> Read More </md-button>
+        </li>
+        <li><img alt="Umbraco Development.jpg" src="img/umbraoc.png" style="max-width:100%;height:auto;">
+        <h1 class="md-title" style="color:#ffffff;">Umbraco Development</h1>
+        <p>".Net, Open source, powerful & flexible!"<br /> We simply love Umbraco!</p>
+            <md-button class="btn1"> Read More </md-button>
+        </li>
+        <li><img alt="Translation Services.jpg" src="img/translation-services.png" style="max-width:100%;height:auto;">
+            <h1 class="md-title" style="color:#ffffff;">Translation Services</h1>
+        <p>Translations for popular CMS systems like<br /> Sitecore, Joomla and Wordpress!</p>
+            <md-button class="btn1"> Read More </md-button>
+        </li>
+        <li><img alt="About.png" src="img/about-us.png" style="max-width:100%;height:auto;">
+            <h1 class="md-title" style="color:#ffffff;margin-left:30px;">ABOUT US</h1>
+            <p>Delivery focused teams with expertise in<br /> delivering CMS centric products!</p>
+            <md-button class="btn1"> Read More </md-button>
+        </li>
+        <li><img alt="contact.png" src="img/contactus.png" style="max-width:100%;height:auto;">
+            <h1 class="md-title" style="color:#ffffff;margin-left:30px;">Let's connect!</h1>
+            <p> Let's invite you for a chat over a coffee<br /> today! We love talking for sure!</p>
+            <md-button class="btn1">Read More</md-button>
+        </li>
+    </ul>
     </div>
-  </div>
-  <!--========================================================
-CONTENT
-=========================================================-->
-  
-  <main>
-    <section class="well padding-top">
-      <div class="container center991">
-        <div class="row">
-          <div class="col-md-4 col-sm-12 col-xs-12">
-            <div class="thumbnail thumb-shadow min-height">
-              <div class="head-title">
-                <h3> H.O.P.E. Team Wish List </h3>
-              </div>
-              <a href="#"><img src="img/hope-team-teen-leadership-badge.png" alt=""></a>
-              <div class="caption bg2">
-                <div class="wrap">
-                  <p> Our Wish List shows items needed for patient activities and outings as well as comfort items 
-                    that will be distributed to patients to support them through their journey. <a href="#"> Click here to see the items on our Wish List.</a> </p>
-                  <p>Applications accepted annually; April 10th - May 10th.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-12 col-xs-12">
-            <div class="thumbnail thumb-shadow min-height">
-              <div class="head-title">
-                <h3> Make a Donation to H.O.P.E. Team </h3>
-              </div>
-              <div class="donate"><a href="#"><img src="img/donate.png" alt=""></a> </div>
-              <div class="volunteer-mark"><a href="#"><img src="img/apply_online_volunteer-v2.png" alt=""></a></div>
-              <div class="caption bg3">
-                <div class="wrap"> </div>
-                  <div id="not-status"></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-12 col-xs-12">
-            <div class="thumbnail thumb-shadow min-height contact-us">
-              <div class="row-devide">
-                <div class="head-title">
-                  <h3> Contact H.O.P.E. Team </h3>
-                </div>
-                <div class="wrap">
-                  <h6>If you have a question, or want to make a donation, contact:</h6>
-                  <p> H.O.P.E. Team Manager </p>
-                  <p>623-207-3545</p>
-                  <p>HOPEteam@ctca-hope.com</p>
-                  <p>H.O.P.E. Team</p>
-                  <p>14200 W. Celebrate Life Way</p>
-                  <p>Goodyear, AZ 85338</p>
-                </div>
-              </div>
-              <div class="clearfix"></div>
-              <div class="row-devide">
-                <div class="head-title">
-                  <h3> 2015 Charity Events</h3>
-                </div>
-                <a href="#"><img src="img/register-to-play-20152.png" alt=""> </a> <a href="#"><img src="img/find-out-more-shoot-for-hope1.png" alt=""></a> </div>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  
-  <!--========================================================
-FOOTER
-=========================================================-->
-  <footer class="top-border">
-    <section class="well1">
-      <div class="container">
-        <p rel="nofollow">Copyright © 2016 H.O.P.E. Team</p>
-      </div>
-    </section>
-  </footer>
-</div>
-<script src="js/bootstrap.min.js"></script> 
-<script src="js/tm-scripts.js"></script>
-    <script type="text/javascript">
-
-//Track state of push permission
-var pushStatus;
-var sw_support=false;
-
-window.onload = function() {
-
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ',    registration.scope);
-
-      //show interface
-      document.getElementById('not-status').innerHTML = '<h4>mobiForge notifications</h4><input type="checkbox" name="pushStatus" id="pushStatus" value="false" /><label for="pushStatus">Receive push notifications for new content</label><div id="pushStatusMsg"></div>';
-
-        //Check subscription state
-        checkSubscription();
-
-        //Attache listener
-        document.getElementById("pushStatus").addEventListener('click', function(){
-          subUnsubPush();
-        });
-    }).catch(function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  }
-  else {
-    console.log("ServiceWorker not supported :-(");
-    document.getElementById('not-status').innerHTML = 'ServiceWorker not supported :-(';
-  }
-
-
-};
 
 
 
-function subUnsubPush(e) {
-  console.log('Sub/unsub');
+    <div ng-include="'components/mobtab.html'"></div>
+    <div ng-include="'components/footer.html'"></div>
+    <!-- Angular Material requires Angular.js Libraries -->
 
-  //Get current status
+    <script src="js/angular.min.js"> </script>
 
-console.log(pushStatus);
-  if(!pushStatus) subscribePush();
-  else unsubscribePush();
-
-}
-
-function subscribePush() {
-  navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
-    //Need to check notification permission?
-    console.log('subscribing...');
-      serviceWorkerRegistration.pushManager.subscribe({ userVisibleOnly: true })
-      .then(function(pushSubscription) {
-        console.log(pushSubscription);
-        console.log(pushSubscription.subscriptionId);
-        //sendSubscription(pushSubscription);
-        sendSub(pushSubscription);
-        document.getElementById("pushStatus").checked = true;
-        document.getElementById("pushStatusMsg").innerHTML = '<span style="color:#0a0;font-weight:bold">You are subscribed!</span>';
-        pushStatus = true;
-      })
-      .catch(function(e) {
-        console.error('Unable to register for push', e);
-      });
-  });
-}
-
-function unsubscribePush() {
-  console.log('unsubscribing...');
-  navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
-
-    serviceWorkerRegistration.pushManager.getSubscription().then(
-      function(pushSubscription) {
-        // Check we have a subscription to unsubscribe
-        if (!pushSubscription) {
-          // Nothing to unsubscribe
-          document.getElementById("pushStatus").checked = false;
-          document.getElementById("pushStatusMsg").innerHTML = '<span style="color:#a00;font-weight:bold">You are not subscribed!</span>';
-          pushStatus = false;
-          return;
-        }
-
-        //Remove from application server
-        cancelSub(pushSubscription);
-
-        // We have a subscription, so unsubscribe  it
-        pushSubscription.unsubscribe().then(function() {
-          document.getElementById("pushStatus").checked = false;
-          document.getElementById("pushStatusMsg").innerHTML = '<span style="color:#a00;font-weight:bold">You are not subscribed!</span>';
-          pushStatus = false;
-          console.log(pushSubscription);
-        }).catch(function(e) {
-          console.log('Error unsubscribing: ', e);
-        });
-      }).catch(function(e) {
-        console.error('Error unsubscribing.', e);
-      });
-  });
-}
-
-function sendSub(pushSubscription) {
-console.log(pushSubscription);
-//get endpoint
-const endPoint = pushSubscription.endpoint.slice(pushSubscription.endpoint.lastIndexOf('/')+1);
-console.log(endPoint);
-  //fetch("https://mobiforge.com/push/subscribe.php?sid=yyy"+pushSubscription.endpoint+"&act=sub").then(function(res) {
-fetch("/umbraco/surface/Push/PushSubscribe?endPoint=" + endPoint).then(function (res) {
-    res.json().then(function(data) {
-          // Show notification
-      console.log(data);
-          //self.registration.showNotification(data.title, {
-          //body: data.body,
-          //icon: data.icon,
-          //tag: data.tag
-        //})
-    }).catch(function(e) {
-        console.error('Error sending subscription to server:', e);
-      });
-  })
-}
-
-function checkSubscription() {
-  navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
-    serviceWorkerRegistration.pushManager.getSubscription().then(
-      function(pushSubscription) {
-          if (!pushSubscription) {
-              pushStatus = false;
-              document.getElementById("pushStatus").checked = false;
-              document.getElementById("pushStatusMsg").innerHTML = '<span style="color:#a00;font-weight:bold">You are not subscribed!</span>';
-        }
-        else {
-              console.log(pushSubscription);
-              pushStatus = true;
-              document.getElementById("pushStatus").checked = true;
-              document.getElementById("pushStatusMsg").innerHTML = '<span style="color:#0a0;font-weight:bold">You are subscribed!</span>';
-              sendSub(pushSubscription);
-        }
-
-      }.bind(this)).catch(function(e) {
-        console.error('Error getting subscription', e);
-      });
-  });
-}
-
-
-function disableNotifications() {
-  navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
-    serviceWorkerRegistration.pushManager.getSubscription().then(
-      function(pushSubscription) {
-        if(pushSubscription) {
-          pushSubscription.unsubscribe().then(function(successful) {
-            cancelSub(pushSubscription);
-          }).catch(function(e) {
-            console.log('Disabling push notifications failed: ', e);
-          });
-        }
-      }).catch(function(e) {
-        console.error('Error thrown while unsubscribing from push messaging.', e);
-      });
-  });
-}
-
-
-function cancelSub(pushSubscription) {
-  const endPoint = pushSubscription.endpoint.slice(pushSubscription.endpoint.lastIndexOf('/')+1);
-  fetch("/umbraco/surface/PushSubscribe?endPoint=" + endPoint).then(function (res) {
-    res.json().then(function(data) {
-          // Show notification
-      console.log(data);
-          //self.registration.showNotification(data.title, {
-          //body: data.body,
-          //icon: data.icon,
-          //tag: data.tag
-        //})
-    })
-  })
-}
-
-    </script>
-
+    <script src="js/angular-animate.min.js"> </script>
+    <script src="js/angular-aria.min.js"> </script>
+    <script src="js/angular-material.min.js">    </script>
+    <script src="js/angular-messages.min.js"></script>
+    <script src="js/mainlogic.js"></script>
 </body>
 </html>
